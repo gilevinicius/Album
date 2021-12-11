@@ -74,7 +74,6 @@ var vm = new Vue({
     },
     
     preLoad() {
-      console.log(window)
       setTimeout(function() {
         let preLoader = document.querySelector(".preLoade")
         preLoader.style.opacity = "0"

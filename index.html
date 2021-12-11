@@ -44,7 +44,6 @@
           <!-- Header -->
           <header id="header">
             <i class="fas fa-camera-retro"></i>
-
             <nav>
               <ul>
                 <li @click="section1T">Álbum</li>
@@ -59,31 +58,26 @@
             
             <!-- Section 1 -->
             <section v-if="section1">
+              
               <div class="container">
-                
                 <div v-for="i in fotosPaginados" class="containerImagem">
                   <img @click="abrirImagem(i.src.large)" :src="i.src.medium" alt="">
                   <h2 class="autor">{{i.photographer}}</h2>
                   <i @click="favorito(i)" class="fas fa-heart"></i>
                 </div>
-                
               </div>
               
                 <nav class="navigation" aria-label="Page navigation example">
                   <ul class="pagination">
-                    
                     <li class="page-item" @click="paginaAnterior()"><a class="page-link" href="#">Anterior</a></li>
-                    
                     <li v-for="pagina in totalDePaginas()" 
                     @click="dataPaginas(pagina)"
                     :class="ativo(pagina)"
                     class="page-item numerosPaginacao">
                     <a class="page-link" href="#">{{pagina}}</a>
-                  </li>
-                  
-                  <li class="page-item" @click="paginaPosterior()"><a class="page-link" href="#">Posterior</a></li>
-                  
-                </ul>
+                    </li>
+                    <li class="page-item" @click="paginaPosterior()"><a class="page-link" href="#">Posterior</a></li>
+                  </ul>
               </nav>
               
                 <a href="#header" v-if="voltarTopo">
@@ -100,13 +94,11 @@
             </div>
             
             <div class="container">
-              
               <div v-for="i in favoritos" class="containerImagem">
                 <img @click="abrirImagem(i.src.large)" :src="i.src.medium" alt="">
                 <h2 class="autor">{{i.photographer}}</h2>
                 <i @click="favorito(i)" class="fas fa-heart favoritou"></i>
               </div>
-              
             </div>
             
           </section>
@@ -119,9 +111,7 @@
             <div>Sobre o álbum</div>
             <p>O álbum existe para te ajudar a guardar seus melhores momentos em fotos, revelações e muito mais!</p>
           </div>
-          
           <i class="fas fa-camera-retro"></i>
-          
           <span style="color: #fff;">Joinville/SC | Copyright 2021 © Álbum LTDA.</span>
           
         </footer>
