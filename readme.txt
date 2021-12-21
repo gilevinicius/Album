@@ -1,1 +1,1 @@
-https://albumfoto.netlify.app/
+https://albumfoto.netlify.app/ 
